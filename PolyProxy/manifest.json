@@ -1,7 +1,7 @@
 {
-    "name": "Pastes.dev Integration",
+    "name": "PolyProxy",
     "author": "NotRx",
-    "id": "pastesdev",
+    "id": "polyproxy",
     "latest": {
         "0.6.0": "0.0.1"
     }
