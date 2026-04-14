@@ -9,7 +9,7 @@ class PolyProxy extends PolyMod {
     pml.registerSettingCategory("PolyProxy");
     pml.registerSetting(
      "Proxy Url",
-     "url",
+     "PolyProxyUrl",
     SettingType.CUSTOM,
      "https://polyproxy.polymodloader.com/",  // default value
   [
@@ -18,7 +18,7 @@ class PolyProxy extends PolyMod {
     { title: "Local",       value: "http://localhost:3000/api" },
   ]
 );
-    this.url = pml.getSetting("url");
+    this.url = pml.getSetting("PolyProxyUrl");
 
     pml.registerGlobalMixin({
       type: MixinType.REPLACEBETWEEN,
