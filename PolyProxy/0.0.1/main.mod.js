@@ -10,7 +10,7 @@ class PastesDevImport extends PolyMod {
             tokenEnd: `https://vps.kodub.com/`,
             func: ProxyUrl,
         });
-        console.log("PolyProxy loaded\n URL:" + proxyUrl);
+      //  console.log("PolyProxy loaded\n URL:" + proxyUrl);
     };
 }
 
