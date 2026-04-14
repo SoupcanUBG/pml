@@ -5,7 +5,7 @@ import {
 } from "https://cdn.polymodloader.com/cb/PolyTrackMods/PolyModLoader/0.6.0/PolyTypes.js";
   
 class PolyProxy extends PolyMod {
-  init = (pml) => {
+  postInit = () => {
     pml.registerSettingCategory("PolyProxy");
     pml.registerSetting(
      "Proxy Url",
