@@ -1,10 +1,8 @@
 import {
   PolyMod,
   MixinType,
-} from "https://cdn.polymodloader.com/cb/PolyTrackMods/PolyModLoader/0.6.0/PolyTypes.js";
-import {
   SettingType,
-} from "https://cdn.polymodloader.com/cb/PolyTrackMods/PolyModLoader/0.6.0/PolyModLoader.js";
+} from "https://cdn.polymodloader.com/cb/PolyTrackMods/PolyModLoader/0.6.0/PolyTypes.js";
   
 class PolyProxy extends PolyMod {
   preInit = (pml) => {
