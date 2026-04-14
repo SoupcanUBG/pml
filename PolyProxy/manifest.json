@@ -1,8 +1,8 @@
 {
     "name": "PolyProxy+",
-    "id": "polyproxy+",
+    "id": "www",
     "author": "NotRx",
     "latest": {
-        "0.6.0": "0.2.0"
+        "0.6.0": "0.2.1"
     }
 }

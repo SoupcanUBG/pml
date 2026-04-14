@@ -22,11 +22,11 @@ class PolyProxy extends PolyMod {
 
     pml.registerGlobalMixin({
       type: MixinType.REPLACEBETWEEN,
-      tokenStart: "https://vps.kodub.com/",
-      tokenEnd: "https://vps.kodub.com/",
-      func: `ActivePolyModLoader.getMod("polyproxy+").url`,
+      tokenStart: `"https://vps.kodub.com/"`,
+      tokenEnd: `"https://vps.kodub.com/"`,
+      func: `ActivePolyModLoader.getMod("www").url`,
     });
-    console.log("PolyProxy loaded\n ProxyUrl: " + this.url);
+    // console.log("PolyProxy loaded\n ProxyUrl: " + this.url);
 
   };
 }
