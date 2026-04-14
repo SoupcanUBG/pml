@@ -5,20 +5,20 @@ import {
 } from "https://cdn.polymodloader.com/cb/PolyTrackMods/PolyModLoader/0.6.0/PolyTypes.js";
   
 class PolyProxy extends PolyMod {
-  preInit = (pml) => {
+  init = (pml) => {
     pml.registerSettingCategory("PolyProxy");
     pml.registerSetting(
      "Proxy Url",
-     "PolyProxyUrl",
+     "ppurl",
     SettingType.CUSTOM,
-     "https://polyproxy.polymodloader.com/",  // default value
+     "https://polyproxy.polymodloader.com/",
   [
-    { title: "Production",  value: "https://example.com/api" },
-    { title: "Staging",     value: "https://staging.example.com/api" },
-    { title: "Local",       value: "http://localhost:3000/api" },
+    { title: "1",  value: "https://value1test.com" },
+    { title: "2",     value: "https://value2test.com" },
+    { title: "3",       value: "https://value3test.com" },
   ]
 );
-    this.url = pml.getSetting("PolyProxyUrl");
+    this.url = pml.getSetting("polyproxyurl");
 
     pml.registerGlobalMixin({
       type: MixinType.REPLACEBETWEEN,
