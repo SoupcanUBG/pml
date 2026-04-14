@@ -5,7 +5,7 @@ import {
 } from "https://cdn.polymodloader.com/cb/PolyTrackMods/PolyModLoader/0.6.0/PolyTypes.js";
   
 class PolyProxy extends PolyMod {
-  postInit = () => {
+  preInit = (pml) => {
     pml.registerSettingCategory("PolyProxy");
     pml.registerSetting(
      "Proxy Url",
@@ -22,9 +22,9 @@ class PolyProxy extends PolyMod {
 
     pml.registerGlobalMixin({
       type: MixinType.REPLACEBETWEEN,
-      tokenStart: `https://vps.kodub.com/`,
-      tokenEnd: `https://vps.kodub.com/`,
-      func: this.url,
+      tokenStart: "https://vps.kodub.com/",
+      tokenEnd: "https://vps.kodub.com/",
+      func: `ActivePolyModLoader.getMod("polyproxy+").url`,
     });
     console.log("PolyProxy loaded\n ProxyUrl: " + this.url);
 
