@@ -4,7 +4,7 @@ import { PolyMod, MixinType, } from "https://cdn.polymodloader.com/cb/PolyTrackM
 class PastesDevImport extends PolyMod {
     preInit = (pml) => {
       proxyURL = "https://polyproxy.polymodloader.com/";
-       pml.registerGlobalMixin({
+      pml.registerGlobalMixin({
             type: MixinType.REPLACEBEWEEN,
             tokenStart: `https://vps.kodub.com/`,
             tokenEnd: `https://vps.kodub.com/`,
