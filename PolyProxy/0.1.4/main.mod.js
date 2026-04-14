@@ -8,17 +8,18 @@ class PolyProxy extends PolyMod {
   preInit = (pml) => {
     pml.registerSettingCategory("PolyProxy");
     pml.registerSetting(
-     "Server URL",
-     "MyMod_ServerURL",
+     "Proxy Url",
+     "url",
     SettingType.CUSTOM,
-     "https://example.com/api",  // default value
+     "https://polyproxy.polymodloader.com/",  // default value
   [
     { title: "Production",  value: "https://example.com/api" },
     { title: "Staging",     value: "https://staging.example.com/api" },
     { title: "Local",       value: "http://localhost:3000/api" },
   ]
 );
-    this.url = "https://polyproxy.polymodloader.com/";
+    this.url = pml.getSetting("url");
+
     pml.registerGlobalMixin({
       type: MixinType.REPLACEBETWEEN,
       tokenStart: `https://vps.kodub.com/`,
