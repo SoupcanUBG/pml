@@ -5,6 +5,7 @@ import {
 
 class PolyProxy extends PolyMod {
   preInit = (pml) => {
+    pml.registerSettingCategory("PolyProxy");
     this.url = "https://polyproxy.polymodloader.com/";
     pml.registerGlobalMixin({
       type: MixinType.REPLACEBETWEEN,
@@ -13,6 +14,7 @@ class PolyProxy extends PolyMod {
       func: this.url,
     });
     console.log("PolyProxy loaded\n ProxyUrl: " + this.url);
+
   };
 }
 
