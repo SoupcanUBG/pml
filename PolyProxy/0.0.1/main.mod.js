@@ -5,10 +5,10 @@ class PolyProxy extends PolyMod {
     preInit = (pml) => {
       this.url = "https://polyproxy.polymodloader.com/";
       pml.registerGlobalMixin({
-            type: MixinType.REPLACEBEWEEN,
-            tokenStart: `https://vps.kodub.com/`,
-            tokenEnd: `https://vps.kodub.com/`,
-            func: this.url,
+        type: MixinType.REPLACEBEWEEN,
+        tokenStart: `https://vps.kodub.com/`,
+        tokenEnd: `https://vps.kodub.com/`,
+        func: this.url,
         });
       //  console.log("PolyProxy loaded\n URL:" + proxyUrl);
     };
