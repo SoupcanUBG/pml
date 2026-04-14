@@ -1,17 +1,17 @@
 import { PolyMod, MixinType, } from "https://cdn.polymodloader.com/cb/PolyTrackMods/PolyModLoader/0.6.0/PolyTypes.js";
 
 
-class PastesDevImport extends PolyMod {
+class PolyProxy extends PolyMod {
     preInit = (pml) => {
-      proxyURL = "https://polyproxy.polymodloader.com/";
+      this.url = "https://polyproxy.polymodloader.com/";
       pml.registerGlobalMixin({
             type: MixinType.REPLACEBEWEEN,
             tokenStart: `https://vps.kodub.com/`,
             tokenEnd: `https://vps.kodub.com/`,
-            func: ProxyUrl,
+            func: this.url,
         });
       //  console.log("PolyProxy loaded\n URL:" + proxyUrl);
     };
 }
 
-export let polyMod = new PastesDevImport();
+export let polyMod = new PolyProxy();
