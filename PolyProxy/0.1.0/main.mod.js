@@ -6,6 +6,17 @@ import {
 class PolyProxy extends PolyMod {
   preInit = (pml) => {
     pml.registerSettingCategory("PolyProxy");
+    pml.registerSetting(
+     "Server URL",
+     "MyMod_ServerURL",
+    SettingType.CUSTOM,
+     "https://example.com/api",  // default value
+  [
+    { title: "Production",  value: "https://example.com/api" },
+    { title: "Staging",     value: "https://staging.example.com/api" },
+    { title: "Local",       value: "http://localhost:3000/api" },
+  ]
+);
     this.url = "https://polyproxy.polymodloader.com/";
     pml.registerGlobalMixin({
       type: MixinType.REPLACEBETWEEN,
