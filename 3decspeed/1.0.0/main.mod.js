@@ -35,8 +35,8 @@ class ThreeDecimalSpeedometer extends PolyMod {
       ],
     );
     pml.registerClassMixin({
-      "kT.prototype",
-      "update",
+      scope: "kT.prototype",
+      path: "update",
       type: MixinType.REPLACEBETWEEN,
       tokenStart: `"Math.trunc(n).toString()"`,
       tokenEnd: `"Math.trunc(n).tostring()"`,
