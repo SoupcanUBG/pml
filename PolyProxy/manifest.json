@@ -1,8 +1,8 @@
 {
-    "name": "PolyProxy+",
-    "id": "polyproxy+",
-    "author": "NotRx",
-    "latest": {
-        "0.6.0": "1.0.0"
-    }
+  "name": "PolyProxy+",
+  "id": "polyproxy+",
+  "author": "NotRx",
+  "latest": {
+    "0.6.0": "1.0.0"
+  }
 }

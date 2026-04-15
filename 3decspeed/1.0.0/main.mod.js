@@ -37,9 +37,9 @@ class ThreeDecimalSpeedometer extends PolyMod {
 );
     pml.registerClassMixin({
       type: MixinType.REPLACEBETWEEN,
-      tokenStart: `"Math.trunc(n).toString()"`
-      tokenEnd: `"Math.trunc(n).tostring()"`
-      func: `n.toFixed(Number.parseInt(ActivePolyModLoader.getSetting("speedometer")))`
+      tokenStart: `"Math.trunc(n).toString()"`,
+      tokenEnd: `"Math.trunc(n).tostring()"`,
+      func: `n.toFixed(Number.parseInt(ActivePolyModLoader.getSetting("speedometer")))`,
     });
      
 
@@ -49,6 +49,6 @@ class ThreeDecimalSpeedometer extends PolyMod {
 
 
     
-  }
+  };
 }
 export let polyMod = new ThreeDecimalSpeedometer();
