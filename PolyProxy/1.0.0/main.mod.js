@@ -26,7 +26,7 @@ class PolyProxy extends PolyMod {
       tokenEnd: `"https://vps.kodub.com/"`,
       func: `ActivePolyModLoader.getMod("polyproxy+").url()`,
     });
-    // console.log("PolyProxy loaded\n ProxyUrl: " + this.url);
+     console.log("PolyProxy loaded\n ProxyUrl: " + ActivePolyModLoader.getMod("polyproxy+").url());
 
   };
 }
