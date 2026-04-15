@@ -25,4 +25,4 @@ class ThreeDecSpeedometer extends PolyMod {
   };
 }
 
-export let polyMod = new ThreeDecimalSpeedometer();
+export let polyMod = new ThreeDecSpeedometer();
