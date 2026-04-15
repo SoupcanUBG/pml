@@ -13,9 +13,9 @@ class PolyProxy extends PolyMod {
     SettingType.CUSTOM,
      "https://polyproxy.polymodloader.com/",
   [
-    { title: "1",  value: "https://value1test.com" },
-    { title: "2",     value: "https://value2test.com" },
-    { title: "3",       value: "https://value3test.com" },
+    { title: "Official",  value: "https://polyproxy.polymodloader.com/" },
+    { title: "2",     value: "https://value2test.com/" },
+    { title: "3",       value: "https://value3test.com/" },
   ]
 );
     this.url = () => {return pml.getSetting("ppurl")}
@@ -24,7 +24,7 @@ class PolyProxy extends PolyMod {
       type: MixinType.REPLACEBETWEEN,
       tokenStart: `"https://vps.kodub.com/"`,
       tokenEnd: `"https://vps.kodub.com/"`,
-      func: `ActivePolyModLoader.getMod("www").url()`,
+      func: `ActivePolyModLoader.getMod("polyproxy+").url()`,
     });
     // console.log("PolyProxy loaded\n ProxyUrl: " + this.url);
 
