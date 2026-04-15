@@ -20,12 +20,12 @@ class ThreeDecimalSpeedometer extends PolyMod {
         { title: "5", value: "5" },
       ],
     );
-    // pml.registerGlobalMixin({
-    //   type: MixinType.REPLACEBETWEEN,
-    //   tokenStart: `const i = Math.trunc(n).toString();`,
-    //   tokenEnd: `const i = Math.trunc(n).toString();`,
-    //   func: `const i = n.toFixed(Number.parseInt(ActivePolyModLoader.getSetting("speedometer")) ?? 0);`,
-    // });w
+    pml.registerGlobalMixin({
+      type: MixinType.REPLACEBETWEEN,
+      tokenStart: const i = Math.trunc(n).toString(),
+      tokenEnd: const i = Math.trunc(n).toString(),
+      func: `const i = n.toFixed(Number.parseInt(ActivePolyModLoader.getSetting("speedometer")) ?? 0)`,
+    });
   };
 }
 export let polyMod = new ThreeDecimalSpeedometer();
