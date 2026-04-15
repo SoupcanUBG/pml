@@ -14,14 +14,14 @@ class ThreeDecSpeedometer extends PolyMod {
       { title: "4", value: 4 },
       { title: "5", value: 5 },
     ]);
-    pml.registerClassMixin(
+    pml.registerClassMixin({
       scope: "Ot.prototype",
       path: "update",
       type: MixinType.REPLACEBETWEEN,
       tokenStart: "Math.trunc(n).toString();",
       tokenEnd: "Math.trunc(n).toString();",
       func: `n.toFixed(Number.parseInt(ActivePolyModLoader.getSetting("spedecpla")));`,
-    );
+    });
   };
 }
 
