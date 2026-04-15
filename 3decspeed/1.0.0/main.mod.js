@@ -23,7 +23,7 @@ class ThreeDecimalSpeedometer extends PolyMod {
     pml.registerGlobalMixin({
       type: MixinType.REPLACEBETWEEN,
       tokenStart: "const i = Math.trunc(n).toString()",
-      tokenEnd: "const i = Math.trunc(n).toString()",
+      tokenEnd: "const i = Math.trunc(n).toString()", // work
       func: `const i = n.toFixed(Number.parseInt(ActivePolyModLoader.getSetting("speedometer")) ?? 0)`,
     });
   };
