@@ -19,7 +19,7 @@ import {
 } from "https://cdn.polymodloader.com/cb/PolyTrackMods/PolyModLoader/0.6.0/PolyTypes.js";
 
 
-class 3DecimalSpeedometer extends PolyMod {
+class ThreeDecimalSpeedometer extends PolyMod {
   init = (pml) => {
     pml.registerSettingCategory("Custom Decimal Speedometer");
     pml.registerSetting(
@@ -39,7 +39,7 @@ class 3DecimalSpeedometer extends PolyMod {
       type: MixinType.REPLACEBETWEEN,
       tokenStart: `"Math.trunc(n).toString()"`
       tokenEnd: `"Math.trunc(n).tostring()"`
-      func: `n.toFixed(Number.parseInt(ActivePolyModLoader.getSetting("speedDecimalPlaces")))`
+      func: `n.toFixed(Number.parseInt(ActivePolyModLoader.getSetting("speedometer")))`
     });
      
 
@@ -51,4 +51,4 @@ class 3DecimalSpeedometer extends PolyMod {
     
   }
 }
-export let polyMod = new 3DecimalSpeedometer();
+export let polyMod = new ThreeDecimalSpeedometer();
