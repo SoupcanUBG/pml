@@ -24,7 +24,7 @@ class PolyProxy extends PolyMod {
       type: MixinType.REPLACEBETWEEN,
       tokenStart: `"https://vps.kodub.com/"`,
       tokenEnd: `"https://vps.kodub.com/"`,
-      func: `ActivePolyModLoader.getMod("www").url()`;
+      func: `ActivePolyModLoader.getMod("www").url()`,
     });
     // console.log("PolyProxy loaded\n ProxyUrl: " + this.url);
 
