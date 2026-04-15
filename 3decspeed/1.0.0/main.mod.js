@@ -4,12 +4,12 @@ import {
   SettingType,
 } from "https://cdn.polymodloader.com/cb/PolyTrackMods/PolyModLoader/0.6.0/PolyTypes.js";
 
-class ThreeDecimalSpeedometer extends PolyMod {
+class ThreeDecSpeed extends PolyMod {
   init = (pml) => {
     pml.registerSettingCategory("Custom Decimal Speedometer");
     pml.registerSetting(
       "Decimal places",
-      "speedometer",
+      "SpeedDecPlaces",
       SettingType.CUSTOM,
       "3",
       [
@@ -20,12 +20,14 @@ class ThreeDecimalSpeedometer extends PolyMod {
         { title: "5", value: "5" },
       ],
     );
-    pml.registerGlobalMixin({
+    pml.registerClassMixin(
+      scope: "We.prototype"
+      path: "update"
       type: MixinType.REPLACEBETWEEN,
-      tokenStart: "const i = Math.trunc(n).toString()",
-      tokenEnd: "const i = Math.trunc(n).toString()", // work
-      func: `const i = n.toFixed(Number.parseInt(ActivePolyModLoader.getSetting("speedometer")) ?? 0)`,
-    });
+      tokenStart: `const i = Math.trunc(n).toString()`,
+      tokenEnd: `const i = Math.trunc(n).toString()`, 
+      func: `const i = n.toFixed(Number.parseInt(ActivePolyModLoader.getSetting("SpeedDecPlaces")) ?? 0)`,
+    );
   };
 }
-export let polyMod = new ThreeDecimalSpeedometer();
+export let polyMod = new ThreeDecSpeed();
