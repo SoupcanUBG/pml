@@ -18,13 +18,14 @@ class PolyProxy extends PolyMod {
     { title: "3",       value: "https://value3test.com" },
   ]
 );
-    this.url = pml.getSetting("ppurl");
+    this.url = () => {return pml.getSetting("ppurl")}
 
     pml.registerGlobalMixin({
       type: MixinType.REPLACEBETWEEN,
       tokenStart: `"https://vps.kodub.com/"`,
       tokenEnd: `"https://vps.kodub.com/"`,
-      func: `ActivePolyModLoader.getMod("www").url`,
+      func: `ActivePolyModLoader.getMod("www").url()`;
+,
     });
     // console.log("PolyProxy loaded\n ProxyUrl: " + this.url);
 
