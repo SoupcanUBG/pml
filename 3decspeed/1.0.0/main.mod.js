@@ -21,8 +21,8 @@ class ThreeDecSpeed extends PolyMod {
       ],
     );
     pml.registerClassMixin(
-      scope: "We.prototype"
-      path: "update"
+      scope: "We.prototype",
+      path: "update",
       type: MixinType.REPLACEBETWEEN,
       tokenStart: "const i = Math.trunc(n).toString()",
       tokenEnd: "const i = Math.trunc(n).toString()", 
