@@ -24,7 +24,7 @@ class ThreeDecimalSpeedometer extends PolyMod {
       type: MixinType.REPLACEBETWEEN,
       tokenStart: `const i = Math.trunc(n).toString();`,
       tokenEnd: `const i = Math.trunc(n).toString();`,
-      func: `const precision = Number.parseInt(ActivePolyModLoader.getSetting("speedometer")) ?? 0;\n const i = n.toFixed(precision);`,
+      func: `const i = n.toFixed(Number.parseInt(ActivePolyModLoader.getSetting("speedometer")) ?? 0);`,
     });
   };
 }
