@@ -18,7 +18,7 @@ class PolyProxy extends PolyMod {
     { title: "3",       value: "https://value3test.com" },
   ]
 );
-    this.url = pml.getSetting("polyproxyurl");
+    this.url = pml.getSetting("ppurl");
 
     pml.registerGlobalMixin({
       type: MixinType.REPLACEBETWEEN,
