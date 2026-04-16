@@ -15,8 +15,8 @@ class ThreeDecSpeedometer extends PolyMod {
       { title: "5", value: 5 },
     ]);
     pml.registerClassMixin({
-      "We.prototype",
-      "update",
+      scope: "We.prototype",
+      path: "update",
       type: MixinType.REPLACEBETWEEN,
       tokenStart: "Math.trunc(n).toString();",
       tokenEnd: "Math.trunc(n).toString();",
