@@ -1,6 +1,7 @@
 import {
   PolyMod,
   MixinType,
+  SettingType,
 } from "https://cdn.polymodloader.com/cb/PolyTrackMods/PolyModLoader/0.6.0/PolyTypes.js";
 
 class ThreeDecimalSpeedometer extends PolyMod {
