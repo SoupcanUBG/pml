@@ -12,13 +12,13 @@ class ThreeDecimalSpeedometer extends PolyMod {
       { title: "2", value: 2 },
       { title: "3", value: 3 },
       { title: "4", value: 4 },
-      { title: "5", value: 5 },
+      { title: "5", value: 5 }
     ]);
     pml.registerGlobalMixin({
       type: MixinType.REPLACEBETWEEN,
       tokenStart: "Math.trunc(n).toString();",
       tokenEnd: "Math.trunc(n).toString();",
-      func: `n.toFixed(Number.parseInt(ActivePolyModLoader.getSetting("speedDecimalPlaces")));`,
+      func: `n.toFixed(Number.parseInt(ActivePolyModLoader.getSetting("speedDecimalPlaces")));`
     });
   };
 }
