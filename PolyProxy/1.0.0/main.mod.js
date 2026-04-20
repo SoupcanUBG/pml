@@ -14,8 +14,7 @@ class PolyProxy extends PolyMod {
       "https://polyproxy.polymodloader.com/",
       [
         { title: "Official", value: "https://polyproxy.polymodloader.com/" },
-        { title: "Rxrk", value: "https://proxy.rxk.workers.dev/" },
-        { title: "Local", value: "http://localhost:3000/" },
+        { title: "Leaderboard Restoration", value: "https://v6.historicalmathematics.xyz/" },
       ],
     );
     this.url = () => {
